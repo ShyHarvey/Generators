@@ -1,12 +1,11 @@
 "use client"
-import { useState, useRef, useEffect } from "react"
+import React, { useState, useRef, useEffect } from "react"
 
 import { gsap } from "gsap-trial"
 import { SplitText } from "gsap-trial/SplitText"
 
 
 
-gsap.registerPlugin(SplitText)
 
 
 export default function Home() {
@@ -14,6 +13,7 @@ export default function Home() {
   let com = useRef(null)
 
   useEffect(() => {
+    gsap.registerPlugin(SplitText)
 
     const splitCompliment = new SplitText(com.current, { type: 'chars,words,lines' })
     //now animate each character into place from 100px above, fading in:
