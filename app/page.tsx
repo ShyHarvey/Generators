@@ -29,13 +29,13 @@ export default function Home() {
   }, [compliment])
 
 
-  const getCompliment = () => {
-    fetch("https://complimentr.com/api ")
-      .then((response) => response.json())
-      .then((data) => setCompliment(data.compliment))
-      .then(() => console.log(compliment))
+  // const getCompliment = () => {
+  //   fetch("https://complimentr.com/api ")
+  //     .then((response) => response.json())
+  //     .then((data) => setCompliment(data.compliment))
+  //     .then(() => console.log(compliment))
 
-  }
+  // }
   return (
     <main >
       <div className="min-h-screen bg-matrix-black">
@@ -51,7 +51,7 @@ export default function Home() {
             </p>
           </div>
           <button
-            onClick={getCompliment}
+            // onClick={getCompliment}
             className="mt-10 inline-block rounded px-6 py-3 font-mononoki  text-xl text-matrix-black
             border-solid border-2 border-sky-500 hover:shadow-md hover:shadow-sky-400
               uppercase leading-normal shadow-md 
